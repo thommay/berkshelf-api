@@ -2,6 +2,7 @@
 
 export PATH=<%= @options[:ruby_bin] %>:$PATH
 export HOME=<%= @options[:new_resource].path %>
+export LANG="en_GB.UTF-8"
 
 exec 2>&1
 exec <%= @options[:new_resource].binary_path %> -p <%= @options[:new_resource].port %> -c <%= @options[:new_resource].config_path %>
